@@ -2,13 +2,12 @@ html, body{
     padding:0;
     margin:0;
     font-family: sans-serif;
-    min-width:1440px;
     margin:auto;
     overflow-x: hidden;
 }
-@media(max-width:1440px){
-    html, body{
-        overflow-x: scroll;
+@media screen and (min-width:1440px){
+    body, html{
+        min-width: 1440px;
     }
 }
 section:nth-child(1){
@@ -22,7 +21,7 @@ section:nth-child(1) img[alt="obrazek"]{
     position:absolute;
 }
 nav{
-    width:1216px;
+    width:fit-content;
     margin:auto;
     height:48px;
     padding:24px 112px;
@@ -163,7 +162,7 @@ section:nth-child(2) #partners{
 }
 section:nth-child(3){
     height:680px;
-    padding:104px;
+    padding:104px 0;
     background-color: white;
 }
 section:nth-child(3) .all{
@@ -214,7 +213,7 @@ section:nth-child(3) p.gray{
 }
 section:nth-child(4){
     height:828px;
-    padding:16px;
+    padding:16px 0;
 }
 section:nth-child(4) .all{
     border-radius:15px;
@@ -265,7 +264,7 @@ section:nth-child(5) .lines{
     right:calc(50% - 300px);
 }
 section:nth-child(5) p{
-    width:800px;
+    max-width:800px;
     margin:0 auto;
     font-size:18pt;
     line-height: 38px;
@@ -273,8 +272,9 @@ section:nth-child(5) p{
 section:nth-child(5) h1{
     font-weight: 500;
     font-size:35pt;
-    margin:0;
+    margin:auto;
     margin-bottom:32px;
+    width:fit-content;
 }
 section:nth-child(5) a{
     color:black;
@@ -412,7 +412,7 @@ section:nth-child(8) a{
 }
 section:nth-child(9){
     height:1028px;
-    padding:16px;
+    padding:16px 0;
 }
 section:nth-child(9) .all{
     border-radius:15px;
@@ -580,7 +580,7 @@ section:nth-child(12) h1{
 .div:nth-child(1) div{
     width:592px;
     position:absolute;
-    right:450px;
+    right:300px;
 }
 section:nth-child(12) p{
     font-size:13pt;
@@ -688,5 +688,159 @@ footer .lines{
     position:absolute;
     z-index: 2137;
     bottom:-50%;
-    right:calc(50%);
+    right:50%;
+}
+@media screen and (min-width: 800px) and (max-width: 1439px) {
+    html{
+        max-width: 100%;
+        position:relative;
+        overflow-x:hidden;
+    }
+    body{
+        max-width:100%;
+        min-width: 800px;
+        overflow-x:hidden;
+    }
+    section{
+        max-width:100%;
+    }
+    nav{
+        padding:24px 0;
+        margin:auto;
+    }
+    nav .button{
+        margin-left:50px;
+    }
+    section:nth-child(1) img:nth-child(5), section:nth-child(1) img:nth-child(2), section:nth-child(1) img:nth-child(6), section:nth-child(1) img:nth-child(4){
+        display:none;
+    }
+    section:nth-child(1) img:nth-child(3){
+        right: calc(50% - 244px);
+    }
+    section:nth-child(5) p{
+        width:780px;
+        margin:auto;
+    }
+    #partners{
+        width:710px !important;
+        grid-template-columns: 350px 350px !important;
+        right:calc(50% - 355px) !important;
+    }
+    section:nth-child(2){
+        height:400px;
+    }
+    .partner{
+        width:350px !important;
+    }
+    section:nth-child(3){
+        height:fit-content;
+    }
+    section:nth-child(3) .all{
+        width:488px;
+        grid-template-columns: 488px;
+        gap:50px;
+    }
+    section:nth-child(4) .all{
+        width:592px;
+        height:1000px;
+    }
+    .all .grid{
+        text-align: left;
+        grid-template-columns: 592px;
+        gap:50px;
+    }
+    .grid dl{
+        width:fit-content;
+        margin:auto;
+    }
+    section:nth-child(4){
+        height:1200px;
+    }
+    section:nth-child(5) p{
+        width:100%;
+    }
+    #experts{
+        grid-template-columns: 384px 384px;
+        width:fit-content;
+    }
+    section:nth-child(6){
+        height:1200px;
+    }
+    section:nth-child(7) .all{
+        width:750px;
+    }
+    section:nth-child(8) h1{
+        font-size:40pt;
+    }
+    section:nth-child(9){
+        height: 1300px;
+    }
+    section:nth-child(9) .all{
+        width:592px;
+        height:1200px;
+    }
+    .gridd{
+        grid-template-columns: 592px !important;
+    }
+    .gridd a{
+        position:relative;
+        margin:30px 0;
+    }
+    section:nth-child(10) .all{
+        grid-template-columns: 592px;
+        gap:50px;
+        height:1000px;
+    }
+    section:nth-child(10) .all div:nth-child(1){
+        height:300px;
+    }
+    section:nth-child(10){
+        height:1000px;
+    }
+    section:nth-child(12){
+        grid-template-columns: 100%;
+        background-color: #022C22;
+    }
+    section:nth-child(12) .div:nth-child(2), #circle, img[alt="wiatraki"]{
+        display:none;
+    }
+    footer .all{
+        width:750px;
+        height:fit-content;
+    }
+    #copy{
+        width:750px;
+        margin-top:30px;
+    }
+    table{
+        position:relative;
+        right:0;
+        margin:auto;
+    }
+    footer ul{
+        position:relative;
+        margin:auto;
+        width: fit-content;
+    }
+    footer{
+        height:600px;
+    }
+    th, td{
+        text-align: center;
+    }
+    footer .all p{
+        display:none;
+    }
+    .div:nth-child(1){
+        width:656px;
+        margin: auto;
+    }
+    .div div{
+        margin:auto;
+        position:relative !important;
+        right:0 !important;
+    }
+    footer .lines{
+        right:calc(50% - 300px);
+    }
 }
