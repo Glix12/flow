@@ -852,7 +852,8 @@ footer .lines{
         display:none;
     }
     section:nth-child(1) img:nth-child(3){
-        right: calc(50% - 175px);
+        right: calc(50% - 244px);
+        max-width: none;
     }
     #partners{
         grid-template-columns: 300px !important;
@@ -880,12 +881,12 @@ footer .lines{
         width:39% !important;
     }
     section:nth-child(4) .all, section:nth-child(9) .all{
-        width:330px;
+        width:90%;
         padding:64px 5px 104px 5px;
         height:fit-content;
     }
     .grid, .gridd{
-        grid-template-columns: 330px !important;
+        grid-template-columns: 100% !important;
         height: fit-content !important;
     }
     section:nth-child(4) h1{
